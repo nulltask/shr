@@ -10,6 +10,7 @@
     "migrate": "npx tsx bin/migrate.ts"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^0.4.5",
     "@types/node": "^18",
     "nuxt": "^3.4.3"
   },
