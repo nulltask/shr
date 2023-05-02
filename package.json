@@ -2,14 +2,23 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "NITRO_PRESET=vercel-edge nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "migrate": "npx tsx bin/migrate.ts"
   },
   "devDependencies": {
     "@types/node": "^18",
     "nuxt": "^3.4.3"
+  },
+  "dependencies": {
+    "@sidebase/nuxt-parse": "^0.3.0",
+    "@vercel/kv": "^0.1.1",
+    "@vercel/postgres-kysely": "^0.1.3",
+    "kysely": "^0.24.2",
+    "pg": "^8.10.0",
+    "uid-promise": "^1.1.1"
   }
 }
