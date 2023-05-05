@@ -1,4 +1,6 @@
 <script setup lang="ts">
+useHead({ title: 'URL Shortener' });
+
 const res = ref();
 const url = ref();
 const invalid = ref(false);
