@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: true,
 
-  modules: ['@unocss/nuxt'],
+  modules: ['nuxt-security', '@unocss/nuxt'],
 
   runtimeConfig: {
     databaseUrl: process.env.POSTGRES_URL,
