@@ -73,6 +73,11 @@ const handleEnter = async () => {
         <p mt-2 text-sm>
           Analytics URL: <a :href="analyticsUrl" target="_blank" text-blue-7>{{ analyticsUrl }}</a>
         </p>
+        <div mt-4 text-center>
+          <a href="https://github.com/nulltask/shr" target="blank" text-xs text-blue-5 uppercase font-bold
+            >View Source</a
+          >
+        </div>
       </div>
     </div>
   </div>
