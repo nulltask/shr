@@ -1,4 +1,4 @@
-import uuid from 'uid-promise';
+import { uid as uuid } from 'uid-promise';
 import { z, parseBodyAs } from '@sidebase/nuxt-parse';
 import kv from '@vercel/kv';
 
