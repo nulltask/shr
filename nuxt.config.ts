@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     databaseUrl: process.env.POSTGRES_URL,
   },
 
+  security: {
+    csrf: true,
+  },
+
   contentSecurityPolicy: {
     'connect-src': ['vitals.vercel-insights.com'],
   },

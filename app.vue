@@ -5,6 +5,8 @@ const res = ref();
 const url = ref();
 const invalid = ref(false);
 
+const csrf = useCsrf();
+
 const shortenedUrl = computed(() => {
   if (!res.value) return;
   return `${window.location.origin}/u/${res.value.data.uid}`;
@@ -27,7 +29,7 @@ const handleInput = () => {
 const handleEnter = async () => {
   if (invalid.value) return;
 
-  res.value = await useFetch('/api/urls', {
+  res.value = await useCsrfFetch('/api/urls', {
     method: 'POST',
     body: { url: url.value },
   });
