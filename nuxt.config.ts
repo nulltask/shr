@@ -7,4 +7,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     databaseUrl: process.env.POSTGRES_URL,
   },
+
+  contentSecurityPolicy: {
+    'connect-src': ['vitals.vercel-insights.com'],
+  },
 });
